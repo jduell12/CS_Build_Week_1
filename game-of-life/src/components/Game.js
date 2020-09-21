@@ -1,10 +1,10 @@
-import React, { useRef, useState } from "react";
+import React from "react";
+import Gameboard from "./Gameboard";
 
-const Game = (props) => {
-  const CELL_SIZE = 20;
+const Game = () => {
   return (
     <div id="game">
-      <div id="game-board"></div>
+      <Gameboard />
       <div>
         <button id="play">Play</button>
         <button id="pause">Pause</button>
