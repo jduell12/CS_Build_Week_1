@@ -2,7 +2,7 @@ import React from "react";
 
 const Rules = () => {
   return (
-    <div>
+    <div id="rules">
       <h2>Rules</h2>
       <ul>
         <li>Each cell in the grid can be in one of two states: live or dead</li>

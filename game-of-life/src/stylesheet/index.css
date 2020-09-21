@@ -1,4 +1,26 @@
 body {
   background: black;
   color: white;
+  text-align: center;
+}
+#about {
+  text-align: justify;
+  margin: 0 25%;
+}
+#about h2 {
+  text-align: center;
+}
+#game-rules {
+  display: flex;
+  flex-direction: row;
+}
+#game-rules #game {
+  width: 50%;
+}
+#game-rules #rules {
+  width: 50%;
+  text-align: initial;
+}
+#game-rules #rules h2 {
+  text-align: center;
 }

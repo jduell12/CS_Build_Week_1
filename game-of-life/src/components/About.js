@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div>
+    <div id="about">
       <h2>About Conway's Game of Life</h2>
       <p>
         The Game Of Life (also known as Life) was created by John Conway in

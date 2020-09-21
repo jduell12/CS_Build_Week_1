@@ -7,8 +7,10 @@ const App = () => {
   return (
     <div>
       <h1>Conway's Game of Life</h1>
-      <Game />
-      <Rules />
+      <div id="game-rules">
+        <Game />
+        <Rules />
+      </div>
       <About />
     </div>
   );
