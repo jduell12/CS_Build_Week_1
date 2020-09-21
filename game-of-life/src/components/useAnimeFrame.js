@@ -13,7 +13,7 @@ export const useAnimationFrame = (timestamp, doAnimationCallback) => {
       setStarted(true);
       requestAnimationFrame(onFrame);
     }
-  }, [started]);
+  });
 
   //request the first animation frame to start the animation
   const onFrame = (timestamp) => {
