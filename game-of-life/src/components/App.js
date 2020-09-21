@@ -8,7 +8,7 @@ const App = () => {
     <div>
       <h1>Conway's Game of Life</h1>
       <div id="game-rules">
-        <Game />
+        <Game width="00%" height="225%" />
         <Rules />
       </div>
       <About />
