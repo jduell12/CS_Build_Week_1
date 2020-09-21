@@ -112,5 +112,20 @@ export const useGrid = () => {
     }
   };
 
-  return [];
+  return [
+    grid,
+    setGrid,
+    generation,
+    setGeneration,
+    clickable,
+    setClickable,
+    speed,
+    setSpeed,
+    checkValidGrid,
+    changeLife,
+    setDefaultGrid,
+    makeGridRandom,
+    gridSize,
+    setGridSize,
+  ];
 };
