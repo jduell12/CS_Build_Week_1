@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
 
 //custom hook for using animation frame
-export const useAnimationFrame = (timestamp, doAnimationCallback) => {
+export const useAnimationFrame = (
+  timestamp,
+  doAnimationCallback,
+  continueA,
+) => {
   //set prev timestamp
   const [prevTimeStamp, setTimeStamp] = useState(timestamp - 30);
-  const [continueAnimation, setContinueAnimation] = useState(true);
   const [started, setStarted] = useState(false);
+  const [continueAnimation, setContinueAnimation] = useState(continueA);
 
   useEffect(() => {
     //only start the animation frame if it's not started
@@ -13,7 +17,7 @@ export const useAnimationFrame = (timestamp, doAnimationCallback) => {
       setStarted(true);
       requestAnimationFrame(onFrame);
     }
-  });
+  }, [started]);
 
   //request the first animation frame to start the animation
   const onFrame = (timestamp) => {
