@@ -7,9 +7,10 @@ const Grid = ({ grid, changeLife, clickable, gridSize }) => {
       {grid.map((cell, i) => {
         return (
           <div
+            id={i}
             key={cell.id}
             className={cell.alive ? "alive" : "dead"}
-            onClick={clickable ? changeLife : null}
+            onClick={clickable ? changeLife : 0}
             data-id={cell.id}
             style={cellDisplay(cell.alive, gridSize)}
           />

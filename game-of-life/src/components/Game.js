@@ -35,9 +35,13 @@ const Game = () => {
         gridSize={gridSize}
       />
       <div>
-        <button id="play">Play</button>
-        <button id="pause">Pause</button>
-        <button id="stop">Stop</button>
+        <button onClick={() => setClickable(!clickable)}>
+          {clickable ? "Play" : "Stop"}
+        </button>
+        {/* <button id="pause">Pause</button> */}
+        <button value="Clear Grid" onClick={clickable ? setDefaultGrid : null}>
+          Clear Grid
+        </button>
       </div>
     </div>
   );

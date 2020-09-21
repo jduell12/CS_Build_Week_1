@@ -82,18 +82,13 @@ export const useGrid = () => {
 
   //maps over the current grid and returns a new grid that is changed based on if the current cell matches the data-id of the current target
   const changeLife = (event) => {
-    const column = event.target.dataset.column;
-    const row = event.target.dataset.row;
-    const id = event.target.dataset.id;
+    const id = event.target.id;
 
     const newGrid = grid.map((cell) => {
-      if (cell.id === id) {
+      if (cell.id == id) {
         return {
-          column: +column,
-          row: +row,
+          ...cell,
           alive: !cell.alive,
-          clickable: true,
-          id: +id,
         };
       } else {
         return cell;
