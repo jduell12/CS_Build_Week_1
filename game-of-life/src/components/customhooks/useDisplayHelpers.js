@@ -28,6 +28,7 @@ export const cellDisplay = (alive, gridSize) => {
       width: `${cellSize}`,
       height: `${cellSize}`,
       background: `black`,
+      border: `1px solid grey`,
     };
   }
 };

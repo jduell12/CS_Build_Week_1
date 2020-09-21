@@ -19,6 +19,9 @@ body {
   width: 50%;
   margin: 1%;
 }
+#game-rules #game .board {
+  margin: 0 25%;
+}
 #game-rules #rules {
   width: 50%;
   text-align: initial;

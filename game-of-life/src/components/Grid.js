@@ -1,9 +1,9 @@
 import React from "react";
 import { cellDisplay, gridDisplay } from "./customhooks/useDisplayHelpers";
 
-const Grid = (grid, changeLife, clickable, gridSize) => {
+const Grid = ({ grid, changeLife, clickable, gridSize }) => {
   return (
-    <div className="grid" style={gridDisplay(gridSize)}>
+    <div className="board" style={gridDisplay(gridSize)}>
       {grid.map((cell, i) => {
         return (
           <div

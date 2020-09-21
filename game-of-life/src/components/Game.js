@@ -26,14 +26,14 @@ const Game = () => {
   return (
     <div id="game">
       <h1>Generation: {generation}</h1>
-      {/* <Grid
+      <Grid
         grid={grid}
-        setGrid={setGrid}
+        // setGrid={setGrid}
         changeLife={changeLife}
         clickable={clickable}
         // checkValidGrid={checkValidGrid}
         gridSize={gridSize}
-      /> */}
+      />
       <div>
         <button id="play">Play</button>
         <button id="pause">Pause</button>
