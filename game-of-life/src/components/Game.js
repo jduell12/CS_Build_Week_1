@@ -1,10 +1,12 @@
 import React from "react";
-import Gameboard from "./Gameboard";
+import Grid from "./Grid";
 
 const Game = () => {
+  // const [] = useGrid();
+
   return (
     <div id="game">
-      <Gameboard />
+      {/* <Grid /> */}
       <div>
         <button id="play">Play</button>
         <button id="pause">Pause</button>
