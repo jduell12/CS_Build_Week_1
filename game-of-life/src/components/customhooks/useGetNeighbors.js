@@ -45,7 +45,7 @@ export const getNeighbors = (cell, width, height) => {
   const CELL_PLUS_WIDTH = cell + width;
   const CELL_MOD_WIDTH = cell % width;
   const TOP_RIGHT = width - 1;
-  const BOTTOM_RIGHT = size - 1;
+  const BOTTOM_RIGHT = SIZE - 1;
 
   let north;
   let north_east;

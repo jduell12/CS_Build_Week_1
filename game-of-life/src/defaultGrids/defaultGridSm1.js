@@ -1,4 +1,4 @@
-let defaultGridSM1 = [];
+export const defaultGridSm1 = [];
 
 let id = 1;
 
@@ -12,9 +12,7 @@ for (let i = 1; i <= 15; i++) {
       clickable: true,
       id: id,
     };
-    defaultGridSM1.push(newObj);
+    defaultGridSm1.push(newObj);
     id++;
   }
 }
-
-export const defaultGridSM1;

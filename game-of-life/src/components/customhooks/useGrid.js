@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { defaultGridSm1 } from "../defaultGrids/defaultGridSm1.js";
+import { defaultGridSm1 } from "../../defaultGrids/defaultGridSm1";
 import { getNeighbors } from "./useGetNeighbors";
 
 export const useGrid = () => {
