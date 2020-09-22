@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import { defaultGridMed1 } from "../../defaultGrids/defaultGridMed1";
 import { defaultGridSm1 } from "../../defaultGrids/defaultGridSm1";
+import { defaultGridLg1 } from "../../defaultGrids/defaultGridLg1";
 import { getNeighbors } from "./useGetNeighbors";
 
 export const useGrid = () => {
@@ -20,7 +21,6 @@ export const useGrid = () => {
     returns memoized callback which increases run time of the program
     */
   const makeGridRandom = useCallback((num) => {
-    console.log(num);
     let numberOfCells = num * num;
     let randomGrid = [];
 
@@ -110,7 +110,13 @@ export const useGrid = () => {
     switch (event.target.value) {
       case "Clear Grid":
         setGridSize(gridSize);
-        setGrid(grid);
+        if (gridSize === 10) {
+          setGrid(defaultGridSm1);
+        } else if (gridSize === 15) {
+          setGrid(defaultGridMed1);
+        } else {
+          setGrid(defaultGridLg1);
+        }
         setGeneration(0);
         break;
       case "Small":
@@ -121,6 +127,11 @@ export const useGrid = () => {
       case "Medium":
         setGridSize(15);
         setGrid(defaultGridMed1);
+        setGeneration(0);
+        break;
+      case "Large":
+        setGridSize(25);
+        setGrid(defaultGridLg1);
         setGeneration(0);
         break;
       default:

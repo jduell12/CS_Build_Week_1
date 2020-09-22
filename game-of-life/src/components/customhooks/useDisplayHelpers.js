@@ -13,6 +13,12 @@ export const gridDisplay = (gridSize) => {
       gridTemplateColumns: `repeat(${gridSize}, 20px)`,
       gridTemplateRows: `repeat(${gridSize}, 20px)`,
     };
+  } else {
+    return {
+      display: "grid",
+      gridTemplateColumns: `repeat(${gridSize}, 15px)`,
+      gridTemplateRows: `repeat(${gridSize}, 15px)`,
+    };
   }
 };
 
@@ -23,6 +29,8 @@ export const cellDisplay = (alive, gridSize) => {
     cellSize = 25;
   } else if (gridSize === 15) {
     cellSize = 20;
+  } else {
+    cellSize = 15;
   }
 
   if (alive) {
