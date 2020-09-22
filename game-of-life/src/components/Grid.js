@@ -2,8 +2,6 @@ import React from "react";
 import { cellDisplay, gridDisplay } from "./customhooks/useDisplayHelpers";
 
 const Grid = ({ grid, changeLife, clickable, gridSize }) => {
-  console.log(gridSize);
-  console.log(grid[grid.length - 1]);
   return (
     <div className="board" style={gridDisplay(gridSize)}>
       {grid.map((cell, i) => {

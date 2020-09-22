@@ -35,9 +35,15 @@ const Game = () => {
         />
         <div className="side-buttons">
           <h3>Grid Sizes</h3>
-          <button onClick={() => setGridSize(10)}>Small</button>
-          <button onClick={() => setGridSize(15)}>Medium</button>
-          <button onClick={() => setGridSize(30)}>Large</button>
+          <button value="Small" onClick={clickable ? setDefaultGrid : null}>
+            Small
+          </button>
+          <button value="Medium" onClick={clickable ? setDefaultGrid : null}>
+            Medium
+          </button>
+          <button value="Large" onClick={clickable ? setDefaultGrid : null}>
+            Large
+          </button>
         </div>
       </div>
       <div className="controls">
@@ -45,7 +51,7 @@ const Game = () => {
           {clickable ? "Play" : "Stop"}
         </button>
         <button onClick={() => checkValidGrid()}>Next Generation</button>
-        <button onClick={() => makeGridRandom(15)}>Random Grid</button>
+        <button onClick={() => makeGridRandom(gridSize)}>Random Grid</button>
         <button value="Clear Grid" onClick={clickable ? setDefaultGrid : null}>
           Clear Grid
         </button>

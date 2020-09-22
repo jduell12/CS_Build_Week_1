@@ -20,6 +20,7 @@ export const useGrid = () => {
     returns memoized callback which increases run time of the program
     */
   const makeGridRandom = useCallback((num) => {
+    console.log(num);
     let numberOfCells = num * num;
     let randomGrid = [];
 
@@ -105,10 +106,25 @@ export const useGrid = () => {
 
   const setDefaultGrid = (event) => {
     event.preventDefault();
-    if (event.target.value === "Clear Grid") {
-      setGridSize(gridSize);
-      setGrid(defaultGridMed1);
-      setGeneration(0);
+
+    switch (event.target.value) {
+      case "Clear Grid":
+        setGridSize(gridSize);
+        setGrid(grid);
+        setGeneration(0);
+        break;
+      case "Small":
+        setGridSize(10);
+        setGrid(defaultGridSm1);
+        setGeneration(0);
+        break;
+      case "Medium":
+        setGridSize(15);
+        setGrid(defaultGridMed1);
+        setGeneration(0);
+        break;
+      default:
+        return;
     }
   };
 
