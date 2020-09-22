@@ -17,17 +17,24 @@ body {
 #game-rules #game {
   width: 50%;
   margin: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 #game-rules #game .board {
-  margin: 0 17%;
+  margin: 2% 0;
 }
 #game-rules #game button {
-  margin: 1%;
+  margin: 0 1%;
 }
 #game-rules #rules {
   width: 50%;
-  text-align: initial;
 }
 #game-rules #rules h2 {
   text-align: center;
+}
+#game-rules #rules ul {
+  margin: 0 10%;
+  text-align: initial;
 }
