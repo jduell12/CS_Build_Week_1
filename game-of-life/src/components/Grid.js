@@ -8,7 +8,7 @@ const Grid = ({ grid, changeLife, clickable, gridSize }) => {
         return (
           <div
             id={i}
-            key={cell.id}
+            key={Math.random() * gridSize}
             className={cell.alive ? "alive" : "dead"}
             onClick={clickable ? changeLife : null}
             data-id={cell.id}
