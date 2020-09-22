@@ -1,7 +1,13 @@
 //helper function that changes the amount of space given to each col and row within the grid
-// sizes are 15x15, 30x30 or 50x50
+// sizes are 10x10, 15x15 or 30x30
 export const gridDisplay = (gridSize) => {
-  if (gridSize === 15) {
+  if (gridSize === 10) {
+    return {
+      display: "grid",
+      gridTemplateColumns: `repeat(${gridSize}, 25px)`,
+      gridTemplateRows: `repeat(${gridSize}, 25px)`,
+    };
+  } else if (gridSize === 15) {
     return {
       display: "grid",
       gridTemplateColumns: `repeat(${gridSize}, 20px)`,
@@ -13,7 +19,9 @@ export const gridDisplay = (gridSize) => {
 export const cellDisplay = (alive, gridSize) => {
   let cellSize = 0;
 
-  if (gridSize === 15) {
+  if (gridSize === 10) {
+    cellSize = 25;
+  } else if (gridSize === 15) {
     cellSize = 20;
   }
 

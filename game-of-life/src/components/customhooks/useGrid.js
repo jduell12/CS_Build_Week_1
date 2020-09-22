@@ -1,4 +1,5 @@
-import React, { useState, useCallback } from "react";
+import { useState, useCallback } from "react";
+import { defaultGridMed1 } from "../../defaultGrids/defaultGridMed1";
 import { defaultGridSm1 } from "../../defaultGrids/defaultGridSm1";
 import { getNeighbors } from "./useGetNeighbors";
 
@@ -7,7 +8,7 @@ export const useGrid = () => {
   const [generation, setGeneration] = useState(0);
   const [clickable, setClickable] = useState(true);
   const [speed, setSpeed] = useState("");
-  const [gridSize, setGridSize] = useState(15);
+  const [gridSize, setGridSize] = useState(10);
 
   /* 
     creates an array of objects where the alive property is randomly set to true or false  
@@ -51,7 +52,7 @@ export const useGrid = () => {
       });
 
       //check if cell lives
-      if (cell.alive && (livingNeighbors === 2 || livingNeighbors == 3)) {
+      if (cell.alive && (livingNeighbors === 2 || livingNeighbors === 3)) {
         return cell;
       }
 
@@ -89,7 +90,7 @@ export const useGrid = () => {
     const id = event.target.id;
 
     const newGrid = grid.map((cell) => {
-      if (cell.id == id) {
+      if (cell.id === id) {
         return {
           ...cell,
           alive: !cell.alive,
@@ -105,8 +106,8 @@ export const useGrid = () => {
   const setDefaultGrid = (event) => {
     event.preventDefault();
     if (event.target.value === "Clear Grid") {
-      setGridSize(15);
-      setGrid(defaultGridSm1);
+      setGridSize(gridSize);
+      setGrid(defaultGridMed1);
       setGeneration(0);
     }
   };
