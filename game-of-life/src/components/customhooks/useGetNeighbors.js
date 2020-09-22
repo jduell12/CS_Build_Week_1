@@ -1,5 +1,3 @@
-import React from "react";
-
 /*
     Returns an array of neighbors for the current cell
     [north, north_east, east, south_east, south, south_west, west, north_west]
@@ -64,6 +62,14 @@ export const getNeighbors = (cell, width, height) => {
     north = CELL_MINUS_WIDTH;
   }
 
+  //south neighbor
+  if (CELL_PLUS_WIDTH >= SIZE) {
+    //wrap around to top of grid
+    south = cell - leftMostCell;
+  } else {
+    south = CELL_PLUS_WIDTH;
+  }
+
   //east neighbor, north-east neighbor, south-east neighbor
   //checks if cell is in right most column
   if (CELL_MOD_WIDTH === TOP_RIGHT) {
@@ -85,14 +91,6 @@ export const getNeighbors = (cell, width, height) => {
     east = cell + 1;
     north_east = north + 1;
     south_east = south + 1;
-  }
-
-  //south neighbor
-  if (CELL_PLUS_WIDTH >= SIZE) {
-    //wrap around to top of grid
-    south = cell - leftMostCell;
-  } else {
-    south = CELL_PLUS_WIDTH;
   }
 
   //west neighbor, south-west neighbor, north-west neighbor
@@ -118,6 +116,18 @@ export const getNeighbors = (cell, width, height) => {
     north_west = north - 1;
     south_west = south - 1;
   }
+
+  console.log({
+    cell: cell,
+    N: north,
+    NE: north_east,
+    E: east,
+    SE: south_east,
+    S: south,
+    SW: south_west,
+    W: west,
+    NW: north_west,
+  });
 
   return [
     north,

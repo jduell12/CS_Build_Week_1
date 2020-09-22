@@ -40,6 +40,7 @@ export const useGrid = () => {
     const nextGeneration = grid.map((cell, i) => {
       let neighbors = getNeighbors(i, gridSize, gridSize);
       let livingNeighbors = 0;
+      console.log(neighbors);
 
       //counts the number of living neighbors around the cell
       neighbors.forEach((neigbor) => {

@@ -20,7 +20,10 @@ body {
   margin: 1%;
 }
 #game-rules #game .board {
-  margin: 0 25%;
+  margin: 0 20%;
+}
+#game-rules #game button {
+  margin: 1%;
 }
 #game-rules #rules {
   width: 50%;
