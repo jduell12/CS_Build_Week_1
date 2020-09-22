@@ -13,14 +13,13 @@ body {
 #game-rules {
   display: flex;
   flex-direction: row;
-  height: 400px;
 }
 #game-rules #game {
   width: 50%;
   margin: 1%;
 }
 #game-rules #game .board {
-  margin: 0 20%;
+  margin: 0 17%;
 }
 #game-rules #game button {
   margin: 1%;

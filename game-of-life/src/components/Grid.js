@@ -10,7 +10,7 @@ const Grid = ({ grid, changeLife, clickable, gridSize }) => {
             id={i}
             key={cell.id}
             className={cell.alive ? "alive" : "dead"}
-            onClick={clickable ? changeLife : 0}
+            onClick={clickable ? changeLife : null}
             data-id={cell.id}
             style={cellDisplay(cell.alive, gridSize)}
           />

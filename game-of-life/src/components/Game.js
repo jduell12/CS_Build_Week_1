@@ -21,12 +21,7 @@ const Game = () => {
     setGridSize,
   ] = useGrid();
 
-  useInterval(checkValidGrid, +speed || 500, grid, clickable);
-
-  const playGame = () => {
-    checkValidGrid();
-    setClickable(false);
-  };
+  useInterval(checkValidGrid, speed || 500, grid, clickable);
 
   return (
     <div id="game">
@@ -40,9 +35,10 @@ const Game = () => {
         gridSize={gridSize}
       />
       <div>
-        <button onClick={() => playGame()}>
+        <button onClick={() => setClickable(!clickable)}>
           {clickable ? "Play" : "Stop"}
         </button>
+        <button onClick={() => checkValidGrid()}>Next Generation</button>
         <button onClick={() => makeGridRandom(15)}>Random Grid</button>
         {/* <button id="pause">Pause</button> */}
         <button value="Clear Grid" onClick={clickable ? setDefaultGrid : null}>

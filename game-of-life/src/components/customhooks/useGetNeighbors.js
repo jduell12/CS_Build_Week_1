@@ -117,18 +117,6 @@ export const getNeighbors = (cell, width, height) => {
     south_west = south - 1;
   }
 
-  console.log({
-    cell: cell,
-    N: north,
-    NE: north_east,
-    E: east,
-    SE: south_east,
-    S: south,
-    SW: south_west,
-    W: west,
-    NW: north_west,
-  });
-
   return [
     north,
     north_east,

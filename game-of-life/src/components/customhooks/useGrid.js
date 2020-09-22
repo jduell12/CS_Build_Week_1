@@ -37,10 +37,13 @@ export const useGrid = () => {
   const checkValidGrid = () => {
     let validGrid = false;
 
+    // console.log(grid);
+
     const nextGeneration = grid.map((cell, i) => {
+      // console.log(i);
       let neighbors = getNeighbors(i, gridSize, gridSize);
       let livingNeighbors = 0;
-      console.log(neighbors);
+      // console.log(neighbors);
 
       //counts the number of living neighbors around the cell
       neighbors.forEach((neigbor) => {
@@ -69,7 +72,7 @@ export const useGrid = () => {
     });
 
     if (validGrid) {
-      setGeneration((generation += 1));
+      setGeneration((prevState) => (prevState += 1));
     } else {
       //allow user to make changes to grid
       setClickable(true);
