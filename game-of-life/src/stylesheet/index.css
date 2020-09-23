@@ -18,6 +18,11 @@ button:active {
 #about h2 {
   text-align: center;
 }
+@media (max-width: 700px) {
+  #about {
+    margin: 0 3%;
+  }
+}
 #game-rules {
   display: flex;
   flex-direction: row;
@@ -77,4 +82,17 @@ button:active {
 }
 #game-rules #rules ul {
   text-align: initial;
+}
+@media (max-width: 700px) {
+  #game-rules {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #game-rules #game {
+    width: 80%;
+  }
+  #game-rules #rules {
+    width: 100%;
+  }
 }
