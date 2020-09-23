@@ -9,7 +9,7 @@ export const useGrid = () => {
   const [generation, setGeneration] = useState(0);
   const [clickable, setClickable] = useState(true);
   const [speed, setSpeed] = useState("");
-  const [gridSize, setGridSize] = useState(10);
+  const [gridSize, setGridSize] = useState(25);
 
   /* 
     creates an array of objects where the alive property is randomly set to true or false  
@@ -110,9 +110,9 @@ export const useGrid = () => {
     switch (event.target.value) {
       case "Clear Grid":
         setGridSize(gridSize);
-        if (gridSize === 10) {
+        if (gridSize === 25) {
           setGrid(defaultGridSm1);
-        } else if (gridSize === 15) {
+        } else if (gridSize === 38) {
           setGrid(defaultGridMed1);
         } else {
           setGrid(defaultGridLg1);
@@ -120,17 +120,17 @@ export const useGrid = () => {
         setGeneration(0);
         break;
       case "Small":
-        setGridSize(10);
+        setGridSize(25);
         setGrid(defaultGridSm1);
         setGeneration(0);
         break;
       case "Medium":
-        setGridSize(15);
+        setGridSize(38);
         setGrid(defaultGridMed1);
         setGeneration(0);
         break;
       case "Large":
-        setGridSize(25);
+        setGridSize(50);
         setGrid(defaultGridLg1);
         setGeneration(0);
         break;
