@@ -49,9 +49,22 @@ button:active {
 }
 #game-rules #game .controls {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-#game-rules #game button {
+#game-rules #game .controls button {
   margin: 0 1%;
+  width: 40%;
+}
+#game-rules #game .controls .top {
+  display: flex;
+  justify-content: flex-start;
+  margin: 3% 0;
+}
+#game-rules #game .controls .bottom {
+  display: flex;
+  justify-content: flex-start;
 }
 #game-rules #rules {
   width: 40%;

@@ -33,11 +33,26 @@
 
     .controls {
       width: 100%;
-    }
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
 
-    button {
-      margin: 0 1%;
-    } //end of button
+      button {
+        margin: 0 1%;
+        width: 40%;
+      } //end of button
+
+      .top {
+        display: flex;
+        justify-content: flex-start;
+        margin: 3% 0;
+      }
+
+      .bottom {
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
   } //end of game id
 
   #rules {

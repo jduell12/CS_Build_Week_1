@@ -47,14 +47,21 @@ const Game = () => {
         </div>
       </div>
       <div className="controls">
-        <button onClick={() => setClickable(!clickable)}>
-          {clickable ? "Play" : "Stop"}
-        </button>
-        <button onClick={() => checkValidGrid()}>Next Generation</button>
-        <button onClick={() => makeGridRandom(gridSize)}>Random Grid</button>
-        <button value="Clear Grid" onClick={clickable ? setDefaultGrid : null}>
-          Clear Grid
-        </button>
+        <div className="top">
+          <button onClick={() => setClickable(!clickable)}>
+            {clickable ? "Play" : "Stop"}
+          </button>
+          <button onClick={() => checkValidGrid()}>Next Generation</button>
+        </div>
+        <div className="bottom">
+          <button onClick={() => makeGridRandom(gridSize)}>Random Grid</button>
+          <button
+            value="Clear Grid"
+            onClick={clickable ? setDefaultGrid : null}
+          >
+            Clear Grid
+          </button>
+        </div>
       </div>
     </div>
   );
