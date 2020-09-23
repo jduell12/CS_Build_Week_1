@@ -25,7 +25,7 @@ export const useGrid = () => {
     let randomGrid = [];
 
     for (let i = 0; i < numberOfCells; i++) {
-      randomGrid = [...randomGrid, { alive: Math.round(Math.random()) }];
+      randomGrid = [...randomGrid, { id: i, alive: Math.round(Math.random()) }];
     }
 
     setGeneration(0);

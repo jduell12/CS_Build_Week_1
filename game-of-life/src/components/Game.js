@@ -18,7 +18,6 @@ const Game = () => {
     setDefaultGrid,
     makeGridRandom,
     gridSize,
-    setGridSize,
   ] = useGrid();
 
   useInterval(checkValidGrid, speed || 500, grid, clickable);
