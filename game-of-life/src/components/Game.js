@@ -20,7 +20,12 @@ const Game = () => {
     gridSize,
   ] = useGrid();
 
-  useInterval(checkValidGrid, speed || 500, grid, clickable);
+  useInterval(
+    checkValidGrid,
+    gridSize === 15 || gridSize == 25 ? 250 : 10,
+    grid,
+    clickable,
+  );
 
   return (
     <div id="game">
