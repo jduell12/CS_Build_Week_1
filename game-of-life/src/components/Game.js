@@ -33,6 +33,9 @@ const Game = () => {
           gridSize={gridSize}
         />
         <div className="side-buttons">
+          <h2>
+            {gridSize} x {gridSize}
+          </h2>
           <h3>Grid Sizes</h3>
           <button value="Small" onClick={clickable ? setDefaultGrid : null}>
             Small
