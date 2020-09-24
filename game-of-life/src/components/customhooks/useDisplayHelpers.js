@@ -22,7 +22,7 @@ export const gridDisplay = (gridSize) => {
   }
 };
 
-export const cellDisplay = (alive, gridSize) => {
+export const cellDisplay = (alive, gridSize, color) => {
   let cellSize = 0;
 
   if (gridSize === 15) {
@@ -34,6 +34,21 @@ export const cellDisplay = (alive, gridSize) => {
   }
 
   if (alive) {
+    //generates random color
+    if (color) {
+      let color = Math.floor(Math.random() * 16777215).toString(16);
+      //checks if random color is black to avoid marking a live cell as dead
+      while (color === "000000") {
+        color = Math.floor(Math.random() * 16777215).toString(16);
+      }
+      let randomColor = "#" + color;
+      return {
+        width: `${cellSize}`,
+        height: `${cellSize}`,
+        background: `${randomColor}`,
+        border: `1px solid grey`,
+      };
+    }
     return {
       width: `${cellSize}`,
       height: `${cellSize}`,

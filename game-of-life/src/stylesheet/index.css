@@ -12,7 +12,8 @@ button:active {
   background: black;
 }
 p,
-li {
+li,
+h4 {
   font-size: 1.15rem;
 }
 #about {
@@ -38,14 +39,19 @@ li {
   align-items: flex-start;
   justify-content: space-evenly;
 }
-#game-rules #game h1 {
+#game-rules #game h1,
+#game-rules #game h4 {
   margin: 0 30%;
 }
 #game-rules #game .grid-buttons {
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: center;
+}
+#game-rules #game .grid-buttons #color {
+  margin: 0 3%;
+  display: flex;
+  justify-content: flex-start;
 }
 #game-rules #game .grid-buttons .board {
   margin: 2% 0;

@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Grid from "./Grid";
 import { useInterval } from "./customhooks/useInterval";
 import { useGrid } from "./customhooks/useGrid";
 
 const Game = () => {
+  const [color, setColor] = useState(false);
+
   const [
     grid,
     setGrid,
@@ -31,11 +33,15 @@ const Game = () => {
     <div id="game">
       <h1>Generation: {generation}</h1>
       <div className="grid-buttons">
+        <div id="color">
+          <button onClick={() => setColor(!color)}>Random Cell Colors</button>
+        </div>
         <Grid
           grid={grid}
           changeLife={changeLife}
           clickable={clickable}
           gridSize={gridSize}
+          color={color}
         />
         <div className="side-buttons">
           <h2>
@@ -53,6 +59,7 @@ const Game = () => {
           </button>
         </div>
       </div>
+      <h4>Random Colors : {color ? "On" : "Off"}</h4>
       <div className="controls">
         <div className="top">
           <button onClick={() => setClickable(!clickable)}>
