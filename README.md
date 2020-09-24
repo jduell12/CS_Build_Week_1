@@ -2,6 +2,8 @@
 
 Application that runs different "Game of Life" scenarios.
 
+Project can be found at: https://conways-game-of-life-rosy.vercel.app/
+
 # React Application
 
 - Grid to display cells

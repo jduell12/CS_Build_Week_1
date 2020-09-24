@@ -11,6 +11,10 @@ button:active {
   color: white;
   background: black;
 }
+p,
+li {
+  font-size: 1.15rem;
+}
 #about {
   text-align: justify;
   margin: 3% 25%;
@@ -76,6 +80,7 @@ button:active {
 }
 #game-rules #rules {
   width: 40%;
+  margin: 0 3%;
 }
 #game-rules #rules h2 {
   text-align: center;
