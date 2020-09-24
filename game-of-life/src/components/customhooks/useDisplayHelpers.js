@@ -36,6 +36,7 @@ export const cellDisplay = (alive, gridSize, color) => {
   if (alive) {
     //generates random color
     if (color) {
+      //generates random number between 0 and 16777215 then converts it to a string with base 16 aka generates hex code
       let color = Math.floor(Math.random() * 16777215).toString(16);
       //checks if random color is black to avoid marking a live cell as dead
       while (color === "000000") {
